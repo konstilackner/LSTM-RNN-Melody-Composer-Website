@@ -1,0 +1,29 @@
+header .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header p {
+  padding: 15px;
+  margin: 0;
+}
+
+section .row img {
+    margin: 30px;
+    max-width: 100%;
+    height: auto;
+}
