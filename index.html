@@ -18,13 +18,14 @@
         </div>
         <div class="row text-center">
             <nav class="col-sm-10">
-                <p>Overview</p>
-                <p>Goal</p>
-                <p>Implementation</p>
-                <p>Listening Examples</p>
-                <p>Evaluation</p>
-                <p>Conclusion</p>
-                <p>Credits</p>
+                <a href="#Overview">Overview</a>
+                <a href="#Goal">Goal</a>
+                <a href="#Implementation">Implementation</a>
+                <a href="#Listening Examples">Listening Examples</a>
+                <a href="#Evaluation">Evaluation</a>
+                <a href="#Conclusion">Conclusion</a>
+                <a href="#Credits">Credits</a>
+                <a href="#Links">Links</a>
             </nav>
         </div>
     </header>
@@ -42,18 +43,32 @@
     
     
     <section class="container">
-        <h1>Overview</h1>
-        <p>This is a short overview about my Bachelor’s thesis I wrote about “Composing a melody with long-short term memory (LSTM) Recurrent Neural Networks” at the Chair for Data Processing at the Technical University Munich. For a more in-depth understanding of the topic you can read the whole <a href="Thesis_final01.pdf" target="_blank">thesis</a> following the link. The code that has been used to implement the LSTM Recurrent Neural Network can be found in my <a href="https://github.com/konstilackner/LSTM-RNN-Melody-Composer" target="_blank">Github repository</a>. Most interestingly are probably the listening examples of the Neural Network Compositions, which can be found further down (link). Furthermore, the evaluation of the composed melodies plays an important role, in order to objectively asses the quality of the LSTM RNN composer and therefore be able to make a contribution to the research in this area.</p>
-    </section>
-    
-    <section class="container">
-        <h1>Goal</h1>
-        <p>The goal of this thesis was to implement a LSTM Recurrent Neural Network (LSTM RNN) that composes a melody to a given chord sequence. The compositional aims are that the melody sounds pleasantly to the listener and cannot be distinguished from human compositions. These two aims have been evaluated in a listening test with human subjects, which is further explained in the evaluation section (link).</p>
+        <div class="row">
+            <h1 id="Overview">Overview</h1>
+        </div>
+        
+        
+        <div class="row">
+            <p>This is a short overview about my Bachelor’s thesis I wrote about “Composing a melody with long-short term memory (LSTM) Recurrent Neural Networks” at the Chair for Data Processing at the Technical University Munich. For a more in-depth understanding of the topic you can read the whole <a href="Thesis_final01.pdf" target="_blank">thesis</a> following the link. The code that has been used to implement the LSTM Recurrent Neural Network can be found in my <a href="https://github.com/konstilackner/LSTM-RNN-Melody-Composer" target="_blank">Github repository</a>. Most interestingly are probably the listening examples of the Neural Network Compositions, which can be found further down (link). Furthermore, the evaluation of the composed melodies plays an important role, in order to objectively asses the quality of the LSTM RNN composer and therefore be able to make a contribution to the research in this area.</p>
+        </div>
+        
     </section>
     
     <section class="container">
         <div class="row">
-            <h1>Implementation</h1>
+            <h1 id="Goal">Goal</h1>
+        </div>
+        
+        
+        <div class="row">
+            <p>The goal of this thesis was to implement a LSTM Recurrent Neural Network (LSTM RNN) that composes a melody to a given chord sequence. The compositional aims are that the melody sounds pleasantly to the listener and cannot be distinguished from human compositions. These two aims have been evaluated in a listening test with human subjects, which is further explained in the evaluation section (link).</p>
+        </div>
+        
+    </section>
+    
+    <section class="container">
+        <div class="row">
+            <h1 id="Implementation">Implementation</h1>
         </div>
         
         <div class="row">
@@ -61,7 +76,7 @@
         </div>
         
         <div class="row">
-            <p>The training data consists of 68 different chord/melody pairs taken from 16 different Beatles songs. The chord/melody pairs have been created in MIDI format and are transformed into a piano roll matrix, consisting of ones if a note is “on” and zeroes if a note is “off”. The transformation process is more detailed in the thesis (link).</p>
+            <p>The training data consists of 68 different chord/melody pairs taken from 16 different Beatles songs. The chord/melody pairs have been created in MIDI format and are transformed into a piano roll matrix, consisting of ones if a note is “on” and zeroes if a note is “off”. The transformation process is more detailed in the <a href="Thesis_final01.pdf" target="_blank">thesis</a>.</p>
         </div>
         
         <div class="row">
@@ -78,73 +93,198 @@
     </section>
     
     <section class="container">
-        <h1>Listening Examples</h1>
-        <p>After conducting the experiments with several different Network architectures, a network with two hidden layers (9 nodes in the first hidden layer, 18 nodes in the second one) has been chosen as the most promising architecture to fulfill the compositional aims from above.</p>
-        <p>Eight different chord sequences have been used to which the LSTM RNN composed the melodies. In addition, humans were asked to compose melodies to the same chord sequences in order to be able to evaluate the computer compositions. In the following you can listen the chord sequences, the computer compositions as well as the human compositions. It should be noted, that all compositions have been made in MIDI format, while a simple piano VST-instrument has been used as the sound engine.</p>
-        
-        <div class="row text-center">
-            <h3>Chords only</h3>
-            <h3>Computer compositions</h3>
-            <h3>Human compositions</h3>
-        </div>
-        <div class="row text-center">
-            <audio controls><source src="audio/chord01.wav" type="audio/wav"></audio>
-            <audio controls><source src="audio/computer01.wav" type="audio/wav"></audio>
-            <audio controls><source src="audio/human01.wav" type="audio/wav"></audio>
+        <div class="row">
+            <h1 id="Listening Examples">Listening Examples</h1>
         </div>
         
         
-        <p>3*8 matrix: First: Chords only. Second: Computer Compositions. Third: Human Compositions</p>
+        <div class="row">
+            <p>After conducting the experiments with several different Network architectures, a network with two hidden layers (9 nodes in the first hidden layer, 18 nodes in the second one) has been chosen as the most promising architecture to fulfill the compositional aims from above.</p>
+        </div>
+        
+        
+        <div class="row">
+            <p>Eight different chord sequences have been used to which the LSTM RNN composed the melodies. In addition, humans were asked to compose melodies to the same chord sequences in order to be able to evaluate the computer compositions. In the following you can listen the chord sequences, the computer compositions as well as the human compositions. It should be noted, that all compositions have been made in MIDI format, while a simple piano VST-instrument has been used as the sound engine.</p>
+        </div>
+        
+        
+        <div class="row">
+            <table style="width:80%" align="center">
+                <tr>
+                    <td></td>
+                    <td align="center"><b>Chords only</b></td>
+                    <td align="center"><b>Computer compositions</b></td>
+                    <td align="center"><b>Human compositions</b></td>
+                </tr>
+                <tr>
+                    <td><b>1</b></td>
+                    <td align="center"><audio controls><source src="audio/chord01.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer01.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human01.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>2</b></td>
+                    <td align="center"><audio controls><source src="audio/chord02.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer02.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human02.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>3</b></td>
+                    <td align="center"><audio controls><source src="audio/chord03.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer03.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human03.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>4</b></td>
+                    <td align="center"><audio controls><source src="audio/chord04.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer04.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human04.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>5</b></td>
+                    <td align="center"><audio controls><source src="audio/chord05.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer05.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human05.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>6</b></td>
+                    <td align="center"><audio controls><source src="audio/chord06.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer06.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human06.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>7</b></td>
+                    <td align="center"><audio controls><source src="audio/chord07.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer07.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human07.wav" type="audio/wav"></audio></td>
+                </tr>
+                <tr>
+                    <td><b>8</b></td>
+                    <td align="center"><audio controls><source src="audio/chord08.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/computer08.wav" type="audio/wav"></audio></td>
+                    <td align="center"><audio controls><source src="audio/human08.wav" type="audio/wav"></audio></td>
+                </tr>
+            </table>
+        </div>
+
     </section>
     
     <section class="container">
-        <h1>Evaluation</h1>
-        <p>In order to be able to evaluate the compositional aims (1. The Melodies should sound pleasantly; 2. The melodies should be indistinguishable from human melodies) an online listening test with 109 human subjects has been conducted. The listening test has been divided into two parts.</p>
-
-        <p>The first part aims to evaluate whether the computer melodies sound pleasantly to the listener. The subjects were presented the computer composition as well as the human composition for each chord sequence and they were asked to indicate, which melody they like better (Insert picture). During the first part, the subjects haven’t been told, that some melodies have been composed by a computer. The following shows the result of the first part.</p>
-        
-        <div class="row text-center">
-            <img src="images/Melodies01to08.jpg" alt="some_text" width="35%">
+        <div class="row">
+            <h1 id="Evaluation">Evaluation</h1>
         </div>
         
-        <p>In about 73% of the cases the human melody was preferred over the computer composition, which indicates a clear preference for human melodies. Thus one can suggest that human melodies sound more pleasantly to the listener than the computer melodies. However, in more than one-fourth of the cases the subjects preferred the computer composition, which shows that a few computer melodies did sound indeed more pleasantly than the human compositions.</p>
+        
+        <div class="row">
+            <p>In order to be able to evaluate the compositional aims (1. The Melodies should sound pleasantly; 2. The melodies should be indistinguishable from human melodies) an online listening test with 109 human subjects has been conducted. The listening test has been divided into two parts.</p>
+        </div>
+        
+        <div class="row">
+            <h4>Part One</h4>
+        </div>
 
-        <p>The second part aims to evaluate whether the computer melodies can be distinguished from human melodies. Here, the subjects have been told that some melodies are composed by a computer. The subjects were presented all 16 melodies after each other (8 computer melodies, 8 human melodies) and were asked for each melody, if they think it was composed by a computer or by a human (insert picture). The results of the second part can be seen in the following:</p>
+        <div class="row">
+            <p>The first part aims to evaluate whether the computer melodies sound pleasantly to the listener. The subjects were presented the computer composition as well as the human composition for each chord sequence and they were asked to indicate, which melody they like better (Insert picture).</p>
+        </div>
+        
+        <div class="row text-center">
+            <img src="images/ListeningTest_PartOne.png" alt="couldn't load file" width="50%">
+        </div>
+        
+        <div class="row">
+            <p>During the first part, the subjects haven’t been told, that some melodies have been composed by a computer. The following shows the result of the first part.</p>
+        </div>
+        
+        
+        <div class="row text-center">
+            <img src="images/Melodies01to08.jpg" alt="couldn't load file" width="35%">
+        </div>
+        
+        <div class="row">
+            <p>In about 73% of the cases the human melody was preferred over the computer composition, which indicates a clear preference for human melodies. Thus one can suggest that human melodies sound more pleasantly to the listener than the computer melodies. However, in more than one-fourth of the cases the subjects preferred the computer composition, which shows that a few computer melodies did sound indeed more pleasantly than the human compositions.</p>
+        </div>
+        
+        <div class="row">
+            <h4>Part Two</h4>
+        </div>
+
+        <div class="row">
+            <p>The second part aims to evaluate whether the computer melodies can be distinguished from human melodies. Here, the subjects have been told that some melodies are composed by a computer. The subjects were presented all 16 melodies after each other (8 computer melodies, 8 human melodies) and were asked for each melody, if they think it was composed by a computer or by a human (insert picture).</p>
+        </div>
+        
+        <div class="row text-center">
+            <img src="images/ListeningTest_PartTwo.png" alt="couldn't load file" width="50%">
+        </div>
+        
+        <div class="row">
+            <p>The results of the second part can be seen in the following:</p>
+        </div>
         
         <div class="row text-center">
             <img src="images/ComputerMelodiesClassification.jpg" alt="If the picture does not load, please contact me via konstantinlackner@gmail.com" width="35%">
             <img src="images/HumanMelodiesClassification.jpg" alt="If the picture does not load, please contact me via konstantinlackner@gmail.com" width="35%">
         </div>
         
-        <p>Both human and computer melodies have been correctly classified in about 61% of the cases, giving a classification accuracy of 0.6164. This means that there is a distinguishable difference between human and computer compositions, even though this is a not very distinct difference, as 40% of the computer melodies have been falsely classified as human melodies. It has to be noted that the subjects were differently biased on the expectations about a computer composition. Some subjects noted in their feedback, that they expected computer melodies to be “almost perfect”, while others assumed that a computer is generally unable to compose music.</p>
+        <div class="row">
+            <p>Both human and computer melodies have been correctly classified in about 61% of the cases, giving a classification accuracy of 0.6164. This means that there is a distinguishable difference between human and computer compositions, even though this is a not very distinct difference, as 40% of the computer melodies have been falsely classified as human melodies. It has to be noted that the subjects were differently biased on the expectations about a computer composition. Some subjects noted in their feedback, that they expected computer melodies to be “almost perfect”, while others assumed that a computer is generally unable to compose music.</p>
+        </div>
+        
 
-        <p>For a more detailed explanation of the evaluation, see the “Evaluation” part of the thesis (link).</p>
+        <div class="row">
+            <p>For a more detailed explanation of the evaluation, see the “Evaluation” part of the <a href="Thesis_final01.pdf" target="_blank">thesis</a>.</p>
+        </div>
+        
     </section>
     
     <section class="container">
-        <h1>Conclusion</h1>
-        <p>The main goal for this thesis was to implement a long-short term memory Recurrent Neural Network, that composes melodies that sound pleasantly to the listener and cannot be distinguished from human melodies. As the evaluation of the computer compositions has shown, the LSTM RNN composed melodies that partly sounded pleasantly to the lis- tener. However, in the majority of the cases the human compositions were preferred, thus the LSTM RNN did not fully succeed in fulfilling the first requirement. In addition, the com- puter compositions could be recognized as such in about 60% of the cases, making them distinguishable from human compositions. Still, in 40% of the cases the computer melodies were misclassified as human melodies. Overall the LSTM RNN did not succeed in com- pletely fulfilling the main goals for this thesis, but it did in fact compose very interesting and nice sounding melodies at parts, that satisfy those goals.</p>
+        <div class="row">
+            <h1 id="Conclusion">Conclusion</h1>
+        </div>
+        
+        
+        <div class="row">
+            <p>The main goal for this thesis was to implement a long-short term memory Recurrent Neural Network, that composes melodies that sound pleasantly to the listener and cannot be distinguished from human melodies. As the evaluation of the computer compositions has shown, the LSTM RNN composed melodies that partly sounded pleasantly to the lis- tener. However, in the majority of the cases the human compositions were preferred, thus the LSTM RNN did not fully succeed in fulfilling the first requirement. In addition, the com- puter compositions could be recognized as such in about 60% of the cases, making them distinguishable from human compositions. Still, in 40% of the cases the computer melodies were misclassified as human melodies. Overall the LSTM RNN did not succeed in completely fulfilling the main goals for this thesis, but it did in fact compose very interesting and nice sounding melodies at parts, that satisfy those goals.</p>
+        </div>
+        
 
-        <p>A final result is an implementation of a LSTM Recurrent Neural Network, that composes a melody to a given chord sequence, which, apart from any requirements of this thesis, can be used as a creative tool of inspiration for composers and music producers.</p>
+        <div class="row">
+            <p>A final result is an implementation of a LSTM Recurrent Neural Network, that composes a melody to a given chord sequence, which, apart from any requirements of this thesis, can be used as a creative tool of inspiration for composers and music producers.</p>
+        </div>
+        
 
-        <p>If you have any questions about the thesis or want to discuss further developments of algorithmic music composition, feel free to contact me via konstantinlackner@gmail.com. I always appreciate feedback  And in case you are interested in non-computer generated music, check out my Soundcloud page: soundcloud.com/konchord</p>
+        <div class="row">
+            <p>If you have any questions about the thesis or want to discuss further developments of algorithmic music composition, feel free to contact me via <a href="mailto:konstantinlackner@gmail.com" target="_top">konstantinlackner@gmail.com</a>. I always appreciate feedback. And in case you are interested in non-computer generated music, check out my <a href="https://soundcloud.com/konchord" target="_blank">Soundcloud page</a>.</p>
+        </div>
+        
     </section>
     
     <section class="container">
-        <h1>Credits</h1>
-        <p>A big thanks to</p>
-        <ul>
-            <li>Thomas Volk, for supervising the thesis, the helpful and critical discussions and keeping me on track, when things didn’t want to work out in the beginning</li>
-            <li>Prof. Diepold, for giving me the opportunity to write about this topic</li>
-            <li>D. Eck, for sharing important insights at an early stage of the thesis</li>
-            <li>Bernat, for sharing his thesis and code, which helped a lot during the implementation phase</li>
-            <li>To everyone who participated in the listening test. I love you all &#9786;</li>
-        </ul>
+        <div class="row">
+            <h1 id="Credits">Credits</h1>
+        </div>
+        
+        
+        <div class="row">
+            <p>A big thanks to</p>
+            <ul>
+                <li>Thomas Volk, for supervising the thesis, the helpful and critical discussions and keeping me on track, when things didn’t want to work out in the beginning</li>
+                <li>Prof. Diepold, for giving me the opportunity to write about this topic</li>
+                <li>D. Eck, for sharing important insights at an early stage of the thesis</li>
+                <li>Bernat, for sharing his thesis and code, which helped a lot during the implementation phase</li>
+                <li>To everyone who participated in the listening test. I love you all &#9786;</li>
+            </ul>
+        </div>
+        
     </section>
     
     <section class="container">
-        <h1>Links</h1>
-        <p>Put here helpful links, such as hexhedria or Bernat.</p>
+        <div class="row">
+            <h1 id="Links">Links</h1>
+        </div>
+        
+        <div class="row">
+            <p>Put here helpful links, such as hexhedria or Bernat.</p>
+        </div>
     </section>
     
     
