@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
       
       
-    <title>Melody Composition with LSTM Recurrent Neural Networks</title>
+    <title>Music Composition LSTM Recurrent Neural Networks</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
 <body>
     <header class="container">
-        <div class="row">
-            <h1 class="col-sm-8">LSTM Music Composition</h1>
+        <div id="headline" class="row text-center">
+            <h1 class="col-sm-12">LSTM RNN Music Composition</h1>
         </div>
-        <div class="row text-center">
-            <nav class="col-sm-10">
+        <div id="navigation" class="row text-center">
+            <nav class="col-sm-12">
                 <a href="#Overview">Overview</a>
                 <a href="#Goal">Goal</a>
                 <a href="#Implementation">Implementation</a>
@@ -28,30 +28,33 @@
                 <a href="#Links">Links</a>
             </nav>
         </div>
+        <div id="DownloadThesis" class="row text-center">
+            <h3 class="col-sm-12"><a href="Thesis_final01.pdf" target="_blank">Download Thesis</a></h3>
+        </div>
     </header>
-    
-    <div class="jumbotron">
+    <!--
+    <div id="banner" class="jumbotron">
         <div class="container">
             <div class="row text-center">
-                <h2>Melody Composition with LSTM Recurrent Neural Networks</h2>
+                <h2>Composing a melody with<br>long-short term memory (LSTM) Recurrent Neural Networks</h2>
                 <h3>!!! This Baby is under construction !!!</h3>
                 <h3><a href="Thesis_final01.pdf" target="_blank">Download Thesis</a></h3>
             </div>
         </div>
     </div>
-    
+    -->
     
     <!-- Main Part Starts Here! -->
     <div class="container">
         <div class="row">
             <div class="col-md-1">
             </div>
-            <div class="col-md-10">
+            <div id="mainpart" class="col-md-10">
                 
                 
                 
                 <h1 id="Overview">Overview</h1>
-                <p>This is a short overview about my Bachelor’s thesis I wrote about “Composing a melody with long-short term memory (LSTM) Recurrent Neural Networks” at the Chair for Data Processing at the Technical University Munich. For a more in-depth understanding of the topic you can read the whole <a href="Thesis_final01.pdf" target="_blank">thesis</a> following the link. The code that has been used to implement the LSTM Recurrent Neural Network can be found in my <a href="https://github.com/konstilackner/LSTM-RNN-Melody-Composer" target="_blank">Github repository</a>. Most interestingly are probably the listening examples of the Neural Network Compositions, which can be found further down (link). Furthermore, the evaluation of the composed melodies plays an important role, in order to objectively asses the quality of the LSTM RNN composer and therefore be able to make a contribution to the research in this area.</p>
+                <p>This is a short overview about my Bachelor’s thesis I wrote about “Composing a melody with long-short term memory (LSTM) Recurrent Neural Networks” at the Chair for Data Processing at the Technical University Munich. For a more in-depth understanding of the topic you can read the whole <a href="Thesis_final01.pdf" target="_blank">thesis</a> following the link. The code that has been used to implement the LSTM Recurrent Neural Network can be found in my <a href="https://github.com/konstilackner/LSTM-RNN-Melody-Composer" target="_blank">Github repository</a>. Most interestingly are probably the listening examples of the Neural Network Compositions, which can be found <a href="#Listening Examples">further below</a>. Furthermore, the evaluation of the composed melodies plays an important role, in order to objectively asses the quality of the LSTM RNN composer and therefore be able to make a contribution to the research in this area.</p>
                 
                 
                 
@@ -133,12 +136,12 @@
                 
                 <h1 id="Evaluation">Evaluation</h1>
                 <p>In order to be able to evaluate the compositional aims (1. The Melodies should sound pleasantly; 2. The melodies should be indistinguishable from human melodies) an online listening test with 109 human subjects has been conducted. The listening test has been divided into two parts.</p>
-                <h2>Part One</h2>
+                <h3>Part One</h3>
                 <p>The first part aims to evaluate whether the computer melodies sound pleasantly to the listener. The subjects were presented the computer composition as well as the human composition for each chord sequence and they were asked to indicate, which melody they like better. During the first part, the subjects haven’t been told, that some melodies have been composed by a computer.</p>
                 <p><img src="images/ListeningTest_PartOne.png" alt="couldn't load file" width="60%"></p>
                 <p><img src="images/Melodies01to08.jpg" alt="couldn't load file" width="55%"></p>
                 <p>In about 73% of the cases the human melody was preferred over the computer composition, which indicates a clear preference for human melodies. Thus one can suggest that human melodies sound more pleasantly to the listener than the computer melodies. However, in more than one-fourth of the cases the subjects preferred the computer composition, which shows that a few computer melodies did sound indeed more pleasantly than the human compositions.</p>
-                <h2>Part Two</h2>
+                <h3>Part Two</h3>
                 <p>The second part aims to evaluate whether the computer melodies can be distinguished from human melodies. Here, the subjects have been told that some melodies are composed by a computer. The subjects were presented all 16 melodies after each other (8 computer melodies, 8 human melodies) and were asked for each melody, if they think it was composed by a computer or by a human.</p>
                 <p><img src="images/ListeningTest_PartTwo.png" alt="couldn't load file" width="60%"></p>
                 <p><img src="images/ComputerMelodiesClassification.jpg" alt="If the picture does not load, please contact me via konstantinlackner@gmail.com" width="55%">
@@ -151,7 +154,7 @@
                 <h1 id="Conclusion">Conclusion</h1>
                 <p>The main goal for this thesis was to implement a long-short term memory Recurrent Neural Network, that composes melodies that sound pleasantly to the listener and cannot be distinguished from human melodies. As the evaluation of the computer compositions has shown, the LSTM RNN composed melodies that partly sounded pleasantly to the listener. However, in the majority of the cases the human compositions were preferred, thus the LSTM RNN did not fully succeed in fulfilling the first requirement. In addition, the computer compositions could be recognized as such in about 60% of the cases, making them distinguishable from human compositions. Still, in 40% of the cases the computer melodies were misclassified as human melodies. Overall the LSTM RNN did not succeed in completely fulfilling the main goals for this thesis, but it did in fact compose very interesting and nice sounding melodies at parts, that satisfy those goals.</p>
                 <p>A final result is an implementation of a LSTM Recurrent Neural Network, that composes a melody to a given chord sequence, which, apart from any requirements of this thesis, can be used as a creative tool of inspiration for composers and music producers.</p>
-                <p>If you have any questions about the thesis or want to discuss further developments of algorithmic music composition, feel free to contact me via <a href="mailto:konstantinlackner@gmail.com" target="_top">konstantinlackner@gmail.com</a>. I always appreciate feedback. And in case you are interested in non-computer generated music, check out my <a href="https://soundcloud.com/konchord" target="_blank">Soundcloud page</a>.</p>
+                <p>If you have any questions about the thesis or want to discuss further developments of algorithmic music composition, feel free to contact me via <a href="mailto:konstantinlackner@gmail.com" target="_top">konstantinlackner@gmail.com</a>. I always appreciate feedback.</p>
                 
                 
                 
@@ -170,8 +173,13 @@
                 <h1 id="Links">Links</h1>
                 <p>Here you can find a (non-comprehensive) list with links related to the topic:</p>
                 <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
+                    <li><a href="http://people.idsia.ch/~juergen/blues/" target="_blank">http://people.idsia.ch/~juergen/blues/</a></li>
+                    <li><a href="https://github.com/bernatfp/LSTM-Composer" target="_blank">https://github.com/bernatfp/LSTM-Composer</a></li>
+                    <li><a href="http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/" target="_blank">http://www.hexahedria.com/2015/08/03/composing-music-with-recurrent-neural-networks/</a></li>
+                    <li><a href="http://www.brandmaier.de/alice/" target="_blank">http://www.brandmaier.de/alice/</a></li>
+                    <li><a href="http://www.wise.io/tech/asking-rnn-and-ltsm-what-would-mozart-write" target="_blank">http://www.wise.io/tech/asking-rnn-and-ltsm-what-would-mozart-write</a></li>
+                    <li><a href="https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/" target="_blank">https://highnoongmt.wordpress.com/2015/05/22/lisls-stis-recurrent-neural-networks-for-folk-music-generation/</a></li>
+                    <li><a href="http://gitxiv.com/posts/WEoQCj8hxHz6vPxe6/gruv-algorithmic-music-generation-using-recurrent-neural" target="_blank">http://gitxiv.com/posts/WEoQCj8hxHz6vPxe6/gruv-algorithmic-music-generation-using-recurrent-neural</a></li>
                 </ul>
                 
             </div>
@@ -185,7 +193,18 @@
     
     <footer class="container">
         <div class="row">
-            <p class="col-sm-4">&copy; 2016 Konstantin Lackner; Insert Pictures of TUM, Chair for Data Processing, Soundcloud Page</p>
+            <div class="col-sm-1"></div>
+            <div id="footer" class="col-sm-10">
+                <center>
+                    <p>
+                        <a href="mailto:konstantinlackner@gmail.com">&copy; 2016 Konstantin Lackner</a>
+                        <a href="https://www.tum.de/" target="_blank"><img src="images/footer_tum.gif" alt="TUM Logo" style="height:50px"></a>
+                        <a href="https://www.ldv.ei.tum.de/" target="_blank"> <img src="images/footer_ldv.png" alt="LDV Logo" style="height:60px"></a>
+                        <a href="https://soundcloud.com/konchord" target="_blank"><img src="images/footer_soundcloud.jpg" alt="soundcloud.com/konchord" style="height:60px"></a>
+                    </p>
+                </center>
+            </div>
+            <div class="col-sm-1"></div>
         </div>
     </footer>
     

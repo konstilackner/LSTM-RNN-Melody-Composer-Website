@@ -40,3 +40,58 @@ header a {
 .container .row {
     font-size: 18px;
 }
+
+body {
+    background: url(images/background06.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 100% 100%;
+
+}
+
+#mainpart {
+    background-color: rgba(255, 255, 255, 0.96);
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+#headline h1 {
+    color: black;
+    font-size: 48px;
+    text-shadow: 1px 1px white;
+}
+
+#navigation a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+#DownloadThesis a {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+
+#footer {
+    background-color: whitesmoke;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#footer img {
+    display: inline;
+}
+
+#footer a {
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline; /* For IE7 */
+    zoom: 1; /* Trigger hasLayout */
+    width: 24%;
+    text-align: center;
+}
