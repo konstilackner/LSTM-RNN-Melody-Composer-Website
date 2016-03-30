@@ -30,7 +30,7 @@
         </div>
     </header>
     
-    <section class="jumbotron">
+    <div class="jumbotron">
         <div class="container">
             <div class="row text-center">
                 <h2>Melody Composition with LSTM Recurrent Neural Networks</h2>
@@ -38,11 +38,11 @@
                 <h3><a href="Thesis_final01.pdf" target="_blank">Download Thesis</a></h3>
             </div>
         </div>
-    </section>
+    </div>
     
     
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Overview">Overview</h1>
         </div>
@@ -52,21 +52,21 @@
             <p>This is a short overview about my Bachelor’s thesis I wrote about “Composing a melody with long-short term memory (LSTM) Recurrent Neural Networks” at the Chair for Data Processing at the Technical University Munich. For a more in-depth understanding of the topic you can read the whole <a href="Thesis_final01.pdf" target="_blank">thesis</a> following the link. The code that has been used to implement the LSTM Recurrent Neural Network can be found in my <a href="https://github.com/konstilackner/LSTM-RNN-Melody-Composer" target="_blank">Github repository</a>. Most interestingly are probably the listening examples of the Neural Network Compositions, which can be found further down (link). Furthermore, the evaluation of the composed melodies plays an important role, in order to objectively asses the quality of the LSTM RNN composer and therefore be able to make a contribution to the research in this area.</p>
         </div>
         
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Goal">Goal</h1>
         </div>
         
         
         <div class="row">
-            <p>The goal of this thesis was to implement a LSTM Recurrent Neural Network (LSTM RNN) that composes a melody to a given chord sequence. The compositional aims are that the melody sounds pleasantly to the listener and cannot be distinguished from human compositions. These two aims have been evaluated in a listening test with human subjects, which is further explained in the evaluation section (link).</p>
+            <p>The goal of this thesis was to implement a LSTM Recurrent Neural Network (LSTM RNN) that composes a melody to a given chord sequence. The compositional aims are that the melody sounds pleasantly to the listener and cannot be distinguished from human compositions. These two aims have been evaluated in a listening test with human subjects, which is further explained in the <a href="#Evaluation">evaluation div</a>.</p>
         </div>
         
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Implementation">Implementation</h1>
         </div>
@@ -80,19 +80,15 @@
         </div>
         
         <div class="row">
-            <p>In order to reduce the computational costs, the LSTM RNN’s architecture has been restricted to twelve input nodes and 24 output nodes. Each node represents one pitch, meaning that chords that will feed-forward through the network need to be in the pitch range of an octave. The same goes for the melodies, which are available to the network at the output layer, thus need to be in the pitch range of two octaves. The following shows a possible architecture of the LSTM RNN.</p>
+            <p>In order to reduce the computational costs, the LSTM RNN’s architecture has been restricted to twelve input nodes and 24 output nodes. Each node represents one pitch, meaning that chords that will feed-forward through the network need to be in the pitch range of an octave. The same goes for the melodies, which are available to the network at the output layer, thus need to be in the pitch range of two octaves. The number of hidden layers and nodes per hidden layer has been varied while conducting the experiments. For more detailed information, see the “Experiments” div of the <a href="Thesis_final01.pdf" target="_blank">thesis</a>.</p>
         </div>
         
         <div class="row text-center">
             <img src="images/LSTMRNNNetworkTopology.png" alt="If the picture does not load, please contact me via konstantinlackner@gmail.com" width="65%">
         </div>
-        
-        <div class="row">
-            <p>The number of hidden layers and nodes per hidden layer has been varied while conducting the experiments. For more detailed information, see the “Experiments” section of the <a href="Thesis_final01.pdf" target="_blank">thesis</a>.</p>
-        </div>
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Listening Examples">Listening Examples</h1>
         </div>
@@ -167,9 +163,9 @@
             </table>
         </div>
 
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Evaluation">Evaluation</h1>
         </div>
@@ -184,15 +180,11 @@
         </div>
 
         <div class="row">
-            <p>The first part aims to evaluate whether the computer melodies sound pleasantly to the listener. The subjects were presented the computer composition as well as the human composition for each chord sequence and they were asked to indicate, which melody they like better (Insert picture).</p>
+            <p>The first part aims to evaluate whether the computer melodies sound pleasantly to the listener. The subjects were presented the computer composition as well as the human composition for each chord sequence and they were asked to indicate, which melody they like better. During the first part, the subjects haven’t been told, that some melodies have been composed by a computer.</p>
         </div>
         
         <div class="row text-center">
             <img src="images/ListeningTest_PartOne.png" alt="couldn't load file" width="50%">
-        </div>
-        
-        <div class="row">
-            <p>During the first part, the subjects haven’t been told, that some melodies have been composed by a computer. The following shows the result of the first part.</p>
         </div>
         
         
@@ -209,15 +201,11 @@
         </div>
 
         <div class="row">
-            <p>The second part aims to evaluate whether the computer melodies can be distinguished from human melodies. Here, the subjects have been told that some melodies are composed by a computer. The subjects were presented all 16 melodies after each other (8 computer melodies, 8 human melodies) and were asked for each melody, if they think it was composed by a computer or by a human (insert picture).</p>
+            <p>The second part aims to evaluate whether the computer melodies can be distinguished from human melodies. Here, the subjects have been told that some melodies are composed by a computer. The subjects were presented all 16 melodies after each other (8 computer melodies, 8 human melodies) and were asked for each melody, if they think it was composed by a computer or by a human.</p>
         </div>
         
         <div class="row text-center">
             <img src="images/ListeningTest_PartTwo.png" alt="couldn't load file" width="50%">
-        </div>
-        
-        <div class="row">
-            <p>The results of the second part can be seen in the following:</p>
         </div>
         
         <div class="row text-center">
@@ -234,16 +222,16 @@
             <p>For a more detailed explanation of the evaluation, see the “Evaluation” part of the <a href="Thesis_final01.pdf" target="_blank">thesis</a>.</p>
         </div>
         
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Conclusion">Conclusion</h1>
         </div>
         
         
         <div class="row">
-            <p>The main goal for this thesis was to implement a long-short term memory Recurrent Neural Network, that composes melodies that sound pleasantly to the listener and cannot be distinguished from human melodies. As the evaluation of the computer compositions has shown, the LSTM RNN composed melodies that partly sounded pleasantly to the lis- tener. However, in the majority of the cases the human compositions were preferred, thus the LSTM RNN did not fully succeed in fulfilling the first requirement. In addition, the com- puter compositions could be recognized as such in about 60% of the cases, making them distinguishable from human compositions. Still, in 40% of the cases the computer melodies were misclassified as human melodies. Overall the LSTM RNN did not succeed in completely fulfilling the main goals for this thesis, but it did in fact compose very interesting and nice sounding melodies at parts, that satisfy those goals.</p>
+            <p>The main goal for this thesis was to implement a long-short term memory Recurrent Neural Network, that composes melodies that sound pleasantly to the listener and cannot be distinguished from human melodies. As the evaluation of the computer compositions has shown, the LSTM RNN composed melodies that partly sounded pleasantly to the listener. However, in the majority of the cases the human compositions were preferred, thus the LSTM RNN did not fully succeed in fulfilling the first requirement. In addition, the computer compositions could be recognized as such in about 60% of the cases, making them distinguishable from human compositions. Still, in 40% of the cases the computer melodies were misclassified as human melodies. Overall the LSTM RNN did not succeed in completely fulfilling the main goals for this thesis, but it did in fact compose very interesting and nice sounding melodies at parts, that satisfy those goals.</p>
         </div>
         
 
@@ -256,41 +244,45 @@
             <p>If you have any questions about the thesis or want to discuss further developments of algorithmic music composition, feel free to contact me via <a href="mailto:konstantinlackner@gmail.com" target="_top">konstantinlackner@gmail.com</a>. I always appreciate feedback. And in case you are interested in non-computer generated music, check out my <a href="https://soundcloud.com/konchord" target="_blank">Soundcloud page</a>.</p>
         </div>
         
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Credits">Credits</h1>
         </div>
         
         
         <div class="row">
-            <p>A big thanks to</p>
+            <p>A big thanks to:</p>
             <ul>
                 <li>Thomas Volk, for supervising the thesis, the helpful and critical discussions and keeping me on track, when things didn’t want to work out in the beginning</li>
-                <li>Prof. Diepold, for giving me the opportunity to write about this topic</li>
-                <li>D. Eck, for sharing important insights at an early stage of the thesis</li>
-                <li>Bernat, for sharing his thesis and code, which helped a lot during the implementation phase</li>
+                <li>Prof. Diepold, for giving me the opportunity to write about the topic of Algorithmic Composition</li>
+                <li>Douglas Eck, for sharing important insights at an early stage of the thesis</li>
+                <li>Bernat Fages, for sharing his thesis and code, which helped a lot during the implementation phase</li>
                 <li>To everyone who participated in the listening test. I love you all &#9786;</li>
             </ul>
         </div>
         
-    </section>
+    </div>
     
-    <section class="container">
+    <div class="container">
         <div class="row">
             <h1 id="Links">Links</h1>
         </div>
         
         <div class="row">
-            <p>Put here helpful links, such as hexhedria or Bernat.</p>
+            <p>Here you can find a (non-comprehensive) list with links related to the topic:</p>
+            <ul>
+                <li>Link 1</li>
+                <li>Link 2</li>
+            </ul>
         </div>
-    </section>
+    </div>
     
     
     <footer class="container">
         <div class="row">
-            <p class="col-sm-4">&copy; 2016 Konstantin Lackner</p>
+            <p class="col-sm-4">&copy; 2016 Konstantin Lackner; Insert Pictures of TUM, Chair for Data Processing, Soundcloud Page</p>
         </div>
     </footer>
     

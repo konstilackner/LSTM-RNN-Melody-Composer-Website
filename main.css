@@ -27,8 +27,8 @@ header a {
   margin: 0;
 }
 
-section .row img {
-    margin: 30px;
+.container .row img {
+    margin: 1rem;
     max-width: 100%;
     height: auto;
 }
